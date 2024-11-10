@@ -21,7 +21,7 @@ const TodoPage = () => {
       const newemail = { email: localemail };
 
       axios
-        .post('http://localhost:5000/api/v2/todos', newemail)
+        .post('https://kaushalam-project.onrender.com/api/v2/todos', newemail)
         .then((res) => {
           if (res.status === 200) {
             setTodos(res.data);
@@ -43,7 +43,7 @@ const TodoPage = () => {
     const newTodo = { title, body, email };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/v2/addTask', newTodo);
+      const response = await axios.post('https://kaushalam-project.onrender.com/api/v2/addTask', newTodo);
 
       if (response.status === 200) {
         setSuccessMessage('Task added successfully!');
@@ -74,7 +74,7 @@ const TodoPage = () => {
     const updatedTodo = { title, body, email };
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/v2/updateTask/${editingTodo._id}`, updatedTodo);
+      const response = await axios.put(`https://kaushalam-project.onrender.com/api/v2/updateTask/${editingTodo._id}`, updatedTodo);
 
       if (response.status === 200) {
         setSuccessMessage('Task updated successfully!');
@@ -93,7 +93,7 @@ const TodoPage = () => {
  
 const handleDeleteTodo = async (todoId) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/api/v2/deleteTask/${todoId}`, {
+      const response = await axios.delete(`https://kaushalam-project.onrender.com/api/v2/deleteTask/${todoId}`, {
         data: { email } // Sending the email in the request body
       });
   

@@ -19,7 +19,7 @@ function SignupPage() {
 
     const newSign = {email,username,password};
 
-    axios.post('http://localhost:5000/api/v1/register', newSign).then(res => {
+    axios.post('https://kaushalam-project.onrender.com/api/v1/register', newSign).then(res => {
         console.log(res);
         if(res.status === 200){
             const userData = res.data.user;
