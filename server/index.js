@@ -8,7 +8,7 @@ dotenv.config();
 database.connect();
 
 app.use(cors({
-  origin: 'https://kaushalam-project.vercel.app/' // Replace with your frontend URL
+  origin: 'https://kaushalam-project.vercel.app' // Replace with your frontend URL
 }));
 
 app.use(express.json());
